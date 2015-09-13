@@ -1,0 +1,59 @@
+<!-- @include '_head.kit' -->
+
+<body>
+<div class="container">
+  <!-- @include '_nav.kit' -->
+  <!-- .wrap -->
+  <div class="wrap">
+    <!-- 評分規則 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="page-header">
+          <h1>
+            <span class="glyphicon glyphicon-camera"></span> 自由主題組 <small>巧克力盃攝影比賽</small>
+          </h1>
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <ol>
+            <li>每件作品下方會有FB的「讚」鈕，喜歡的照片就點讚</li>
+            <li>不限點幾個讚</li>
+            <li>點讚數最多的即為巧克力盃攝影比賽金獎</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.評分規則 -->
+    <!-- .photo-gallery -->
+    <div class="row">
+      <div class="col-md-12  photo-gallery">
+      
+
+        <!-- 每一個照片就是一個a標籤 -->
+        <a class="fancybox" rel="gallery1" href="assets/img/test-photo.png" data-title-id="title-1">
+        <span class="img-min-height">
+          <img src="assets/img/test-photo.png" alt="雲和山的彼端" />
+        </span>
+          <p>雲和山的彼端</p> <!-- 作品名稱 -->
+          <div class="fb-like" data-layout="button_count" data-href="http://www.google.com"></div> <!-- fb讚鈕 -->
+          <!--
+            下方的div是在照片裡的讚鈕
+            id對應的是a標籤第一行中的data-title-id
+            .fb-like中的data-href，就是要給按讚的圖片網址
+          -->
+          <div id="title-1" class="hide">
+              雲和山的彼端 <div class="fb-like" data-layout="button_count" data-href="http://www.google.com"></div>
+          </div>
+          <!-- /在照片裡的讚鈕 -->
+        </a>
+        <!-- /每一個照片就是一個a標籤 -->
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /.wrap -->
+</div>
+
+<!-- @include '_js.kit' -->
+</body>
+</html>

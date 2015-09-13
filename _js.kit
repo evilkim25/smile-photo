@@ -1,0 +1,21 @@
+<script src="assets/vendor/jquery-1.11.3.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/vendor/fancybox/jquery.fancybox.js"></script>
+<script>
+	$(".fancybox")
+	    .attr('rel', 'gallery')
+	    .fancybox({
+	        beforeLoad: function() {
+	            var el, id = $(this.element).data('title-id');
+
+	            if (id) {
+	                el = $('#' + id);
+	            
+	                if (el.length) {
+	                    this.title = el.html();
+	                }
+	            }
+	        }
+	    });
+</script>
