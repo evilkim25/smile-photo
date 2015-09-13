@@ -6,3 +6,5 @@ config.codekit
 >>>>>>> gh-pages
 
 config.codekit
+
+*.codekit
