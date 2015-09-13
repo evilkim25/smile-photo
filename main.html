@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="zh-TW"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ie7" lang="zh-TW"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie8" lang="zh-TW"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js modern" lang="zh-TW"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>第一屆巧克力盃 攝影比賽</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <script src="assets/vendor/modernizr.js"></script>
+
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/darkly.min.css">
+  <link rel="stylesheet" href="assets/vendor/fancybox/jquery.fancybox.css">
+  <link rel="stylesheet" href="assets/css/screen.css">
+
+  <!--[if lt IE 9]>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+  <script src="assets/vendor/modernizr.js"></script>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+</head>
+<body>
+<div class="container">
+  <!-- .navbar -->
+<div class="row">
+  <div class="col-md-12">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+         
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button> <a class="navbar-brand" href="/index.html"><span class="glyphicon glyphicon-camera"></span> 巧克力盃攝影比賽</a>
+      </div>
+      
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/index.html">攝影比賽規則</a>
+          </li>
+          <li>
+            <a href="/main.html">指定主題組</a>
+          </li>
+          <li>
+            <a href="/free.html">自由主題組</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+  </div>
+</div>
+<!-- /.navbar -->  <!-- .wrap -->
+  <div class="wrap">
+    <!-- 評分規則 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="page-header">
+          <h1>
+            <span class="glyphicon glyphicon-camera"></span> 指定主題組 題目：歡樂年華 <small>巧克力盃攝影比賽</small>
+          </h1>
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <ol>
+            <li>每件作品下方會有FB的「讚」鈕，喜歡的照片就點讚</li>
+            <li>不限點幾個讚</li>
+            <li>點讚數最多的即為巧克力盃攝影比賽金獎</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.評分規則 -->
+    <!-- .photo-gallery -->
+    <div class="row">
+      <div class="col-md-12  photo-gallery">
+      
+
+        <!-- 每一個照片就是一個a標籤 -->
+        <a class="fancybox" rel="gallery1" href="assets/img/test-photo.png" data-title-id="title-1">
+        <span class="img-min-height">
+          <img src="assets/img/test-photo.png" alt="雲和山的彼端" />
+        </span>
+          <p>雲和山的彼端</p> <!-- 作品名稱 -->
+          <div class="fb-like" data-layout="button_count" data-href="http://www.google.com"></div> <!-- fb讚鈕 -->
+          <!--
+            下方的div是在照片裡的讚鈕
+            id對應的是a標籤第一行中的data-title-id
+            .fb-like中的data-href，就是要給按讚的圖片網址
+          -->
+          <div id="title-1" class="hide">
+              雲和山的彼端 <div class="fb-like" data-layout="button_count" data-href="http://www.google.com"></div>
+          </div>
+          <!-- /在照片裡的讚鈕 -->
+        </a>
+        <!-- /每一個照片就是一個a標籤 -->
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /.wrap -->
+</div>
+
+<script src="assets/vendor/jquery-1.11.3.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/vendor/fancybox/jquery.fancybox.js"></script>
+<script>
+	$(".fancybox")
+	    .attr('rel', 'gallery')
+	    .fancybox({
+	        beforeLoad: function() {
+	            var el, id = $(this.element).data('title-id');
+
+	            if (id) {
+	                el = $('#' + id);
+	            
+	                if (el.length) {
+	                    this.title = el.html();
+	                }
+	            }
+	        }
+	    });
+</script></body>
+</html>

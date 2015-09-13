@@ -1,0 +1,23 @@
+// 寬螢幕
+$desktop-large: (min-width: 1440px)
+=desktop-large
+	@media screen and (min-width: 1440px)
+		@content
+
+// 電腦螢幕
+$desktop-normal: (min-width: 769px)
+=desktop-normal
+	@media screen and (min-width: 769px)
+		@content
+
+// 主要以ipad（直立時）為主
+$tablet: (max-width: 768px)
+=tablet
+	@media screen and (max-width: 768px)
+		@content
+
+// 手機螢幕
+$phones: (max-device-width: 480px)
+=phones
+	@media screen and (max-device-width: 480px)
+		@content
