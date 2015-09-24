@@ -88,30 +88,7 @@
     <!-- /.評分規則 -->
     <!-- .photo-gallery -->
     <div class="row">
-      <div class="col-md-12  photo-gallery">
-      
-
-        <!-- 每一個照片就是一個a標籤 -->
-        <a class="fancybox" rel="gallery1" href="assets/img/test-photo.png" data-title-id="title-1">
-        <span class="img-min-height">
-          <img src="assets/img/test-photo.png" alt="雲和山的彼端" />
-        </span>
-          <p>雲和山的彼端</p> <!-- 作品名稱 -->
-          <div class="fb-like" data-layout="button_count" data-href="http://www.google.com"></div> <!-- fb讚鈕 -->
-          <!--
-            下方的div是在照片裡的讚鈕
-            id對應的是a標籤第一行中的data-title-id
-            .fb-like中的data-href，就是要給按讚的圖片網址
-          -->
-          <div id="title-1" class="hide">
-              雲和山的彼端 <div class="fb-like" data-layout="button_count" data-href="http://www.google.com"></div>
-          </div>
-          <!-- /在照片裡的讚鈕 -->
-        </a>
-        <!-- /每一個照片就是一個a標籤 -->
-
-
-      </div>
+      <div class="col-md-12  photo-gallery"></div>
     </div>
   </div>
   <!-- /.wrap -->
@@ -137,5 +114,18 @@
 	            }
 	        }
 	    });
-</script></body>
+</script>
+<!-- json --><script>
+$(document).ready(function(){
+  $.ajax({
+    url: '/assets/js/json/main.json',
+    success: function(data){
+      for(var i = 0; i < data.length ; i++) {
+        $('.photo-gallery').append('<a class="fancybox" rel="gallery1" href="' + data[i].src + '" data-title-id="title-' + data[i].id + '"><div class="sean-thumbnail"><img src="' + data[i].src + '" alt="' + data[i].alt + '" /></div><p>' + data[i].alt + '</p><div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div><div id="title-' + data[i].id + '" class="hide">' + data[i].alt + ' <div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div></div></a>');
+      }
+    }
+  });
+});
+</script>
+</body>
 </html>

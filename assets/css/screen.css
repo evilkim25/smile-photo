@@ -110,66 +110,90 @@ ol ol {
     display: block;
     clear: both; }
 
-.photo-gallery a {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 25%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-bottom: 32px; }
-  .photo-gallery a:nth-child(4n + 1) {
-    margin-left: 0;
-    margin-right: -100%;
-    clear: both; }
-  .photo-gallery a:nth-child(4n + 2) {
-    margin-left: 25%;
-    margin-right: -100%;
-    clear: none; }
-  .photo-gallery a:nth-child(4n + 3) {
-    margin-left: 50%;
-    margin-right: -100%;
-    clear: none; }
-  .photo-gallery a:nth-child(4n + 4) {
-    margin-left: 75%;
-    margin-right: -100%;
-    clear: none; }
-  .photo-gallery a:hover, .photo-gallery a:focus {
-    text-decoration: none; }
-  .photo-gallery a p {
-    margin-bottom: 0;
-    font-size: 14px; }
-  @media screen and (max-width: 768px) {
-    .photo-gallery a {
-      width: 32.20339%;
-      float: left; }
-      .photo-gallery a:nth-child(3n + 1) {
-        margin-left: 0;
-        margin-right: -100%;
-        clear: both;
-        margin-left: 0; }
-      .photo-gallery a:nth-child(3n + 2) {
-        margin-left: 33.89831%;
-        margin-right: -100%;
-        clear: none; }
-      .photo-gallery a:nth-child(3n + 3) {
-        margin-left: 67.79661%;
-        margin-right: -100%;
-        clear: none; } }
-  @media screen and (max-device-width: 480px) {
-    .photo-gallery a {
-      width: 100%;
-      float: left; }
-      .photo-gallery a:nth-child(1n + 1) {
-        margin-left: 0;
-        margin-right: -100%;
-        clear: none; } }
-.photo-gallery img {
-  display: block;
+.photo-gallery {
   max-width: 100%;
-  height: auto;
-  min-height: 199.516px; }
+  margin-left: auto;
+  margin-right: auto; }
+  .photo-gallery:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .photo-gallery > a {
+    display: block;
+    margin-bottom: 32px; }
+    @media (min-width: 769px) {
+      .photo-gallery > a {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 25%;
+        float: left;
+        padding-left: 0.83333%;
+        padding-right: 0.83333%; }
+        .photo-gallery > a:nth-child(4n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both; }
+        .photo-gallery > a:nth-child(4n + 2) {
+          margin-left: 25%;
+          margin-right: -100%;
+          clear: none; }
+        .photo-gallery > a:nth-child(4n + 3) {
+          margin-left: 50%;
+          margin-right: -100%;
+          clear: none; }
+        .photo-gallery > a:nth-child(4n + 4) {
+          margin-left: 75%;
+          margin-right: -100%;
+          clear: none; } }
+    @media (max-width: 768px) {
+      .photo-gallery > a {
+        width: 32.20339%;
+        float: left; }
+        .photo-gallery > a:nth-child(3n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both;
+          margin-left: 0; }
+        .photo-gallery > a:nth-child(3n + 2) {
+          margin-left: 33.89831%;
+          margin-right: -100%;
+          clear: none; }
+        .photo-gallery > a:nth-child(3n + 3) {
+          margin-left: 67.79661%;
+          margin-right: -100%;
+          clear: none; } }
+    @media (max-device-width: 480px) {
+      .photo-gallery > a {
+        width: 99.99992%;
+        float: left; }
+        .photo-gallery > a:nth-child(1n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both;
+          margin-left: 0; } }
+    .photo-gallery > a:hover, .photo-gallery > a:focus {
+      text-decoration: none; }
+    .photo-gallery > a p {
+      margin-bottom: 0;
+      font-size: 14px; }
+    .photo-gallery > a .sean-thumbnail {
+      min-height: 200px;
+      max-height: 200px;
+      overflow: hidden;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .photo-gallery > a .sean-thumbnail:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=54);
+        opacity: 0.54; }
+      .photo-gallery > a .sean-thumbnail img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto; }
 
 .page-header {
   border-bottom-color: rgba(85, 85, 85, 0.87); }
