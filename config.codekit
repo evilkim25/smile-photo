@@ -87,6 +87,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/json\/free.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/json\/free.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/json\/free-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/js\/json\/main.json": {
 		"fileType": 524288,
 		"ignore": 1,
