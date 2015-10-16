@@ -38,7 +38,7 @@ $(document).ready(function(){
     url: 'http://evilkim25.github.io/smile-photo/assets/js/json/main.json',
     success: function(data){
       for(var i = 0; i < data.length ; i++) {
-        $('.photo-gallery').append('<a class="fancybox" rel="gallery1" href="' + data[i].src + '" data-title-id="title-' + data[i].id + '"><div class="sean-thumbnail"><img src="' + data[i].src + '" alt="' + data[i].alt + '" /></div><p>' + data[i].alt + '</p><div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div><div id="title-' + data[i].id + '" class="hide">' + data[i].alt + ' <div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div></div></a>');
+        $('.photo-gallery').append('<a class="fancybox" rel="gallery" href="' + data[i].src + '" data-title-id="title-' + data[i].id + '"><div class="sean-thumbnail"><img src="' + data[i].src + '" alt="' + data[i].alt + '" /></div><p>' + data[i].alt + '</p><div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div><div id="title-' + data[i].id + '" class="hide">' + data[i].alt + ' <div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div></div></a>');
       }
     }
   });
