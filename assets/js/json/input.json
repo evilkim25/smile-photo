@@ -1,10 +1,8 @@
-{
-    "Denny": {
-        "name": "Denny",
-        "phone": "1234"
-    },
-    "Sean": {
-        "name": "Sean",
-        "phone": "1234"
-    }
-}
+[
+	{	"name": "Bill",
+		"phone": "0999999999"
+	},
+	{	"name": "Bill2",
+		"phone": "2222"
+	}
+]
