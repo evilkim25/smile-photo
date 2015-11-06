@@ -1,9 +1,10 @@
-[
-	{
-	    "name": "Denny",
-	    "phone": "1234"
-	}, {
-	    "name": "Sean",
-	    "phone": "1234"
-	}
-]
+{
+    "Denny": {
+        "name": "Denny",
+        "phone": "1234"
+    },
+    "Sean": {
+        "name": "Sean",
+        "phone": "1234"
+    }
+}
