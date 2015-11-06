@@ -193,7 +193,8 @@ ol ol {
         max-width: 100%;
         height: auto;
         margin-right: auto;
-        margin-left: auto; }
+        margin-left: auto;
+        min-height: 200px; }
 
 .page-header {
   border-bottom-color: rgba(85, 85, 85, 0.87); }

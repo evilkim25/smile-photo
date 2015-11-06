@@ -75,22 +75,36 @@
       <div class="col-sm-12">
         <div class="page-header">
           <h1>
-            <span class="glyphicon glyphicon-camera"></span> 指定主題組 題目：歡樂假期 <small>巧克力盃攝影比賽</small>
+            <span class="glyphicon glyphicon-camera"></span> 上傳圖片 <small>巧克力盃攝影比賽</small>
           </h1>
         </div>
-        <div class="alert alert-warning" role="alert">
-          <ol>
-            <li>每件作品下方會有FB的「讚」鈕，喜歡的照片就點讚</li>
-            <li>不限點幾個讚</li>
-            <li>點讚數最多的即為巧克力盃攝影比賽金獎</li>
-          </ol>
-        </div>
+        
       </div>
     </div>
     <!-- /.評分規則 -->
     <!-- .photo-gallery -->
     <div class="row">
-      <div class="col-md-12  photo-gallery"></div>
+      <div class="col-md-12  photo-gallery">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">姓名：</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="姓名">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="col-sm-2 control-label">電話：</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" id="phone" placeholder="電話">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-danger">確認送出</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <!-- /.wrap -->
@@ -118,13 +132,22 @@
 	    });
 </script>
 <!-- json --><script>
-$(document).ready(function(){
+$('form').submit(function(){
+  var name = $("#name").val();
+  var phone = $("#phone").val();
   $.ajax({
-    url: 'http://evilkim25.github.io/smile-photo/assets/js/json/main.json',
-    success: function(data){
-      for(var i = 0; i < data.length ; i++) {
-        $('.photo-gallery').append('<a class="fancybox" rel="gallery" href="' + data[i].src + '" data-title-id="title-' + data[i].id + '"><div class="sean-thumbnail"><img src="' + data[i].srcTh + '" alt="' + data[i].alt + '" /></div><p>' + data[i].alt + '</p><div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div><div id="title-' + data[i].id + '" class="hide">' + data[i].alt + ' <div class="fb-like" data-layout="button_count" data-href="' + data[i].fb + '"></div></div></a>');
-      }
+    url: 'http://evilkim25.github.io/smile-photo/assets/js/json/input.json',
+    type: 'POST',
+    dataType: 'json',
+    data:{
+      name: name,
+      phone: phone
+    },
+    error: function(){
+      alert('傳送失敗！');
+    },
+    success: function(){
+      alert('成功！！！！！');
     }
   });
 });
