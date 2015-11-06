@@ -1,8 +1,9 @@
-{
-	"data":[
-		{
-			"name": "bob",
-			"phone": "0999999999"
-		}
-	]
-}
+[
+	{
+	    "name": "Denny",
+	    "phone": "1234"
+	}, {
+	    "name": "Sean",
+	    "phone": "1234"
+	}
+]
