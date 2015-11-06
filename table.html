@@ -137,11 +137,11 @@ $('form').submit(function(){
   var phone = $("#phone").val();
   $.ajax({
     url: 'http://evilkim25.github.io/smile-photo/assets/js/json/input.json',
-    type: 'POST',
+    type: 'GET',
     dataType: 'json',
     data:{
-      "name": name,
-      "phone": phone
+      name: name,
+      phone: phone
     },
     error: function(){
       alert('傳送失敗！');
