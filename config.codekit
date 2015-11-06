@@ -109,16 +109,16 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/assets\/js\/json\/input.json": {
-		"fileType": 524288,
-		"ignore": 1,
+	"\/assets\/js\/json\/input.js": {
+		"fileType": 64,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/json\/input.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/assets\/js\/json\/input-min.json",
+		"inputAbbreviatedPath": "\/assets\/js\/json\/input.js",
+		"outputAbbreviatedPath": "\/assets\/js\/json\/min\/input-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/json\/main.json": {
 		"fileType": 524288,
