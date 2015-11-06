@@ -48,15 +48,13 @@
 <!-- @include '_js.kit' -->
 <script>
 $('form').submit(function(){
-  var name = $("#name").val();
-  var phone = $("#phone").val();
   $.ajax({
     url: 'http://evilkim25.github.io/smile-photo/assets/js/json/input.json',
     type: 'GET',
     dataType: 'json',
-    data:{
-      name: name,
-      phone: phone
+    data: {
+      name: $("#name").val(),
+      phone: $("#phone").val()
     },
     error: function(){
       alert('傳送失敗！');
