@@ -1,8 +1,62 @@
-<!-- @include '_head.kit' -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="zh-TW"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ie7" lang="zh-TW"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie8" lang="zh-TW"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js modern" lang="zh-TW"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>第一屆巧克力盃 攝影比賽</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <script src="assets/vendor/modernizr.js"></script>
+
+  <link rel="stylesheet" href="http://bootswatch.com/darkly/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/screen.css">
+
+  <!--[if lt IE 9]>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+  <script src="assets/vendor/modernizr.js"></script>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
 
 <body>
 <div class="container">
-  <!-- @include '_nav.kit' -->
+  <!-- .navbar -->
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+           
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+             <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button> <a class="navbar-brand" href="#">巧克力盃攝影比賽</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">攝影比賽規則</a>
+            </li>
+            <li>
+              <a href="#">去指定主題組評選</a>
+            </li>
+            <li>
+              <a href="#">去自由主題組評選</a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+    </div>
+  </div>
+  <!-- /.navbar -->
   <!-- .wrap -->
   <div class="wrap">
     <!-- 比賽規則 -->
@@ -13,8 +67,6 @@
             <span class="glyphicon glyphicon-bullhorn"></span> 比賽規則 <small>巧克力盃攝影比賽</small>
           </h1>
         </div>
-      </div>
-      <div class="col-sm-5">
         <ol>
           <li>分為指定主題組、自由主題組，可自由參加</li>
           <li>指定主題組主題：<span class="text-warning">歡樂假期</span></li>
@@ -26,30 +78,36 @@
               <li>Line給翔宇</li>
             </ol>
           </li>
-          <li>評分方式：
-            <ol>
-              <li>繳件作品會整理至本網站：<a href="/smile-photo/main.html">指定主題組</a>、<a href="/smile-photo/free.html">自由主題組</a></li>
-              <li>各張照片只會寫上作品名稱，不會寫出作者</li>
-              <li>每件作品下方會有FB的「讚」鈕，喜歡的照片就點讚</li>
-              <li>不限點幾個讚，點讚後只會看到數字，不會看到有誰點</li>
-              <li>各組點讚數最多的即為巧克力盃攝影比賽金獎</li>
-              <li>獎品就是巧克力</li>
-            </ol>
-          </li>
         </ol>
-      </div>
-      <div class="col-sm-7">
-        <div class="embed-responsive embed-responsive-4by3">
-          <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.7649619156027!2d121.8034249!3d25.1436359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f796bf63419%3A0x933818b7df70488e!2z5r2u5aKD5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1442054028343"></iframe>
-        </div>
-        <p>比賽地點：潮境公園</p>
       </div>
     </div>
     <!-- /比賽規則 -->
+    <!-- 評分規則 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="page-header">
+          <h1>
+            <span class="glyphicon glyphicon-bullhorn"></span> 評分規則 <small>巧克力盃攝影比賽</small>
+          </h1>
+        </div>
+        <ol>
+          <li>繳件作品會整理至本網站</li>
+          <li>各張照片只會寫上作品名稱，不會寫出作者</li>
+          <li>每件作品下方會有FB的「讚」鈕，喜歡的照片就點讚</li>
+          <li>不限點幾個讚，點讚後只會看到數字，不會看到有誰點</li>
+          <li>各組點讚數最多的即為巧克力盃攝影比賽金獎</li>
+          <li>獎品就是巧克力</li>
+        </ol>
+      </div>
+    </div>
+    <!-- /.評分規則 -->
   </div>
   <!-- /.wrap -->
 </div>
 
-<!-- @include '_js.kit' -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>

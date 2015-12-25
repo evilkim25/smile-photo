@@ -1,0 +1,59 @@
+@import compass
+@import variables
+@import mixins
+@import media-susy
+@import base
+@import susy
+
+h1, h2 ,h3
+	color: #FFF
+p, li
+	color: rgba(#FFF, .87)
+li
+	+adjust-font-size-to($base-font-size)
+a
+	font-size: 14px
+	&:hover
+		color: #BBDEFB
+ol
+	ol
+		padding-left: 24px
+		list-style-type: Upper-roman
+
+.wrap
+	+container
+	padding-top: 50px
+
+.photo-gallery
+	+container
+	> a
+		display: block
+		+susy-breakpoint($desktop-normal)
+			+gallery(3 of 12 inside)
+		+susy-breakpoint($tablet)
+			+gallery(4 of 12)
+		+susy-breakpoint($phones)
+			+gallery(11.99999 of 12)
+		margin-bottom: 32px
+		&:hover, &:focus
+			text-decoration: none
+		p
+			margin-bottom: 0
+			font-size: 14px
+		.sean-thumbnail
+			min-height: 200px
+			max-height: 200px
+			overflow: hidden
+			+transition($transition-default)
+			&:hover
+				+opacity($opacity-md)
+			img
+				+img-responsive
+				margin-right: auto
+				margin-left: auto
+				min-height: 200px
+.page-header
+	border-bottom-color: rgba(#555, .87)
+
+.fb-like
+	overflow: hidden
